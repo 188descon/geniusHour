@@ -1,2 +1,5 @@
-var sound = new Audio( 'sound.mp3' ).play();
-alert()
+//create an HTML notification
+var notification = webkitNotifications.createHTMLNotification(
+  'notification.html' // html url - can be relative
+  );
+notification.show();
