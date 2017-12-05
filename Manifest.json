@@ -1,0 +1,24 @@
+{
+//basic information
+"name": "Dio tab recovery" ,
+"description": "enter "It's me! Dio! into the text box and your previous tab will be opened along with the time stop effect playing",
+"version": "1.0",
+"manifest_version":2,
+"default_title": "It's me! Dio!",
+"icons": {
+"icon.png"
+},
+//declare pages
+"browser_action":{
+"default_icon": "icon.png",
+"popup": "popup.html"
+},
+//ask for permissions
+"permissions": [
+"http://*/", 
+"https://*/",
+"tabs",
+"history"
+]
+
+}
