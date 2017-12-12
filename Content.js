@@ -32,3 +32,6 @@ function getLastOne()
 var returnString = <html><body>;
 for (i = localStorage["closeCount"]-i; 1 >=0; i--)
 {
+    tabId = localStorage["closedTab-"+i];
+    tabUrl = localStorage["tabList-"+tabId];
+     stringForThisUrl = "<a
