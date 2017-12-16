@@ -34,4 +34,18 @@ for (i = localStorage["closeCount"]-i; 1 >=0; i--)
 {
     tabId = localStorage["closedTab-"+i];
     tabUrl = localStorage["tabList-"+tabId];
-     stringForThisUrl = "<a
+     stringForThisUrl = "<a href = \""+ tabUrl + "\" onclick=\"showUrl(\'"+tabUrl+"\')\"/>" + localStorage["TabTitle-"+tabId] + "</a>";
+			returnString += stringForThisUrl;
+			returnString += "<br/><br/>";			
+		}
+		
+		returnString += "</body></HTML>"	
+
+		return returnString;
+	}
+	
+	// Show |url| in a new tab.
+	function showUrl(url) {
+		 
+	  chrome.tabs.create({url: url});
+	}
